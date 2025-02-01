@@ -117,6 +117,11 @@ Area\ of\ die\ in\ microns = 660.685 * 671.405 = 443587.212425\ Square\ Microns
 
 ![image](https://github.com/user-attachments/assets/29f630f8-7cb8-4a15-b255-c18e919809e8)
 
+![image](https://github.com/user-attachments/assets/4d03de07-e4db-4320-9814-8b8cd7419048)
+
+![image](https://github.com/user-attachments/assets/d39b7800-6b7f-4be9-9024-25bbf8031b0e)
+
+
 
 ## Library binding and Cell Placement
 ### Placement and Routing of Physical Design Flow
