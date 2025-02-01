@@ -1,4 +1,4 @@
-***FUNDAMENTALS OF CHIP DESIGN***
+# FUNDAMENTALS OF CHIP DESIGN
 
 <img width="445" alt="image" src="https://github.com/user-attachments/assets/deea4487-1d92-4470-8f14-519e1189681c" />
 
@@ -20,7 +20,7 @@ The Arduino board drives the pin locations of this package.
 
 The chip lies somewhere in the middle of the package and is connected in this way to pins. This transfers all the signals from the outer world to the interior of the chip
 
-***COMPONENTS OF THE CHIP**
+## COMPONENTS OF THE CHIP
 
 
 
