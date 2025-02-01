@@ -106,3 +106,42 @@ There are parts of this course:
 <img width="978" alt="image" src="https://github.com/user-attachments/assets/f10d957c-ca7d-4e9a-b148-0dce296e5fb7" />
 
 RTL IPs: Hardware 
+
+
+## DAY 1 Tasks
+Calculate the flop ratio
+
+-> Run picorv32a synthesis using openLANE and get the desired output
+-> To calculate flip flop ratio:
+```math
+Flop\ Ratio = \frac{Number\ of\ D\ Flip\ Flops}{Total\ Number\ of\ Cells}
+```
+
+```math
+Percentage\ of\ DFF's = Flop\ Ratio * 100
+```
+
+
+
+![image](https://github.com/user-attachments/assets/85f14300-cb85-425d-a930-7efa6a422199)
+![image](https://github.com/user-attachments/assets/d645a81b-d444-4fdf-8931-ee42f00cd600)
+![image](https://github.com/user-attachments/assets/5375f0db-7679-4356-b023-9d6649659bc2)
+
+#### To calculate the flop ratio:
+![image](https://github.com/user-attachments/assets/9689e750-ccc7-4f9a-989c-c8f663658d55)
+
+The highlighted part is the number of D Flops
+
+![image](https://github.com/user-attachments/assets/97fd164c-02c7-46bf-b3bf-7a2a7479bac6)
+
+The highlighted part is the number of cells
+
+Now, 
+
+```math
+Flop\ Ratio = \frac{1613}{14876} = 0.108429685
+```
+```math
+Percentage\ of\ DFF's = 0.108429685 * 100 10.84296854\ \%
+```
+
