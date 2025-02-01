@@ -110,6 +110,7 @@ RTL IPs: Hardware
 
 ## DAY 1 Tasks
 Calculate the flop ratio
+**Flip-Flop**: is a circuit that can store and retrieve it whenever required. It can 'flip' & 'flop' as its name suggests, between 2 stable states, like X and X'
 
 -> Run picorv32a synthesis using openLANE and get the desired output
 -> To calculate flip flop ratio:
