@@ -4,7 +4,7 @@
 ### Utilisation and Aspect ratio
 1. Defining the values of the core and die is the first of the physical design flow
 2. We begin using a basic netlist, 2 flip flops, i.e. the launch flop and the capture flop.
-> Note: A netlist defines the connectivity of an electronic design
+> Note: A netlist explains the connectivity of an electronic design
 
 3. There is a simple combinational logic connecting them
 4. This netlist can be extrapolated to many kits
@@ -76,3 +76,54 @@ Commands performed to invoke openLANE
 
 
 ![image](https://github.com/user-attachments/assets/38809544-7105-4be2-9d5a-ee192b2016d6)
+
+Metal layers have to be set as one less than the actual value
+
+### Calculate the die area
+
+![image](https://github.com/user-attachments/assets/b33bd477-d38f-4496-9a98-b23c9338d63b)
+
+According to the floorplan def
+
+```math
+1\ micron = 1000\ Database\ Units
+```
+```math
+Die\ width\ in\ unit\ distance = 660685 - 0 = 660685
+```
+```math
+Die\ height\ in\ unit\ distance = 671405 - 0 = 671405
+```
+```math
+Distance\ in\ microns = \frac{Value\ in\ Unit\ Distance}{1000}
+```
+```math
+Die\ width\ in\ microns = \frac{660685}{1000} = 660.685\ Microns
+```
+```math
+Die\ height\ in\ microns = \frac{671405}{1000} = 671.405\ Microns
+```
+```math
+Area\ of\ die\ in\ microns = 660.685 * 671.405 = 443587.212425\ Square\ Microns
+```
+
+![image](https://github.com/user-attachments/assets/49bfc34e-b5d8-40d1-9d2b-3427ec9023ac)
+
+![image](https://github.com/user-attachments/assets/96ce60e5-9e1b-414c-ad73-c0acc44de8aa)
+
+![image](https://github.com/user-attachments/assets/2e2e3a82-5e4c-4ea4-ad51-343db720bc0c)
+
+![image](https://github.com/user-attachments/assets/5c3b2d12-5e7d-4d86-96bf-2abae6e7f8ec)
+
+![image](https://github.com/user-attachments/assets/29f630f8-7cb8-4a15-b255-c18e919809e8)
+
+
+## Library binding and Cell Placement
+### Placement and Routing of Physical Design Flow
+1. Bind netlist with physical cells
+Taking an example of a simple netlist, with FFs and standard cells. Here, we can determine the function of these cells by their shape. However, in reality, the FFs & standard cells are square-shaped & rectangular. For this, the functions of the gates are given physical dimensions. After giving all the netlist components a standard shape, they look like this
+
+![image](https://github.com/user-attachments/assets/bf8fd07c-b027-435e-ab38-e8cc3b5416dc)
+
+This is a shelf arrangement that includes FFs, standard cells, and blocks. This can be called a library, the components of the netlist & blocks act as the books. The library consists of the information of the cells and their shape and size. Size of the cell is inversely proportionate to resistance path.
+
