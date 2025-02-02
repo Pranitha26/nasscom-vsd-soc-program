@@ -109,11 +109,11 @@ There are parts of this course:
 ***EDA***: Electronic Design Automation, is the CAD tools required to design the circuit, etc 
 ***PDK Data***: Process design kit
 
-Until 1979, design & fabrication of the grid circuits were tightly coupled & by only a few companies like TI, Intel, etc.
+Until 1979, the design & fabrication of the grid circuits were tightly coupled & by only a few companies like TI, Intel, etc.
 In 1979, John Conway and Carver Mead proposed separating design from fabrication by releasing Lambda-based design rules. They then published the first VLSI(very large-scale integration) book, Introduction to VLSI Systems. This book gave rise to VLSI education and Structure Design Methodology, which laid the basics of modern ISE design practices. 
 After that, many fabric-only companies like ***Pure Play*** and design-only companies like Fabless started to emerge 
 ***PDK is the interface between the user and Fab, a set of files.***
-PDK include Process Design Tools, Design Structured cell libraries, IO libraries, etc. Hence, the PDK has a lot of information that was distributed under Non-Disclosure Agreements(NDA) making it inaccessible to the public.
+PDK include Process Design Tools, Design Structured cell libraries, IO libraries, etc. Hence, the PDK has a lot of information distributed under Non-Disclosure Agreements(NDA) making it inaccessible to the public.
 In 2020, Google collaborated with Skywater to open-source the PDK for the 130nm Skywater processor, leading to the release of the first ever open-source PDK
 
 ![image](https://github.com/user-attachments/assets/34cab4b3-db2a-411e-a0d6-7fc7aeac0255)
@@ -127,14 +127,14 @@ Steps of RTL to GDSII flow
 ![image](https://github.com/user-attachments/assets/72967d4f-2e29-4f16-b07c-ce60b6fe1a5c)
 
 Synthesis
-This converts RTL(Register Transfer Level) to its circuits using Standard Cell Library components. Standard cells are the logic gates. The resultant circuit is described in HDL and is called Gate Level Netlist. 
-The functions of the Gate Level are equivalent to the RTL
+* This converts RTL(Register Transfer Level) to its circuits using Standard Cell Library components. Standard cells are the logic gates. * The resultant circuit described in HDL is called Gate Level Netlist. 
+* The functions of the Gate Level are equivalent to the RTL
 
 ![image](https://github.com/user-attachments/assets/3e73bc1a-c232-4e6c-a781-134f110f024a)
 
-Standard cells
-They are the fundamental blocks
-Detailed view-GDSII & Abstract view- LEF
+* Standard cells
+* They are the fundamental blocks
+* Detailed view-GDSII & Abstract view- LEF
 
 ![image](https://github.com/user-attachments/assets/8ab2c19b-8b3e-4f23-9416-01e34a2b9a24)
 
@@ -147,8 +147,8 @@ Macro Floor Planning
 
 ![image](https://github.com/user-attachments/assets/0c2bae11-9cbf-4111-bb1d-a00374501a42)
 
-Power Planning
-Power Planning has many layers. The upper metal layers are thick with low resistance and are used for power distribution. This is doen to avoid IR drops and electron migration
+* Power Planning
+* Power Planning has many layers. The upper metal layers are thick with low resistance and are used for power distribution. This is done to avoid IR drops and electron migration
 
 ![image](https://github.com/user-attachments/assets/5d38c66d-ef01-4be8-a58e-cc4c30fafe4a)
 
@@ -156,9 +156,9 @@ Placement
 
 ![image](https://github.com/user-attachments/assets/42bd45bc-6a5e-4630-a777-30adc2afe364)
 
-Global vs Detailed Placement
-Global: Tries to find the best position for the cells, which are not necessarily legal
-Detailed: The Global Placements are made legal, and the cells don't overlap
+* Global vs Detailed Placement
+* Global: Tries to find the best position for the cells, which are not necessarily legal
+* Detailed: The Global Placements are made legal, and the cells don't overlap
 
 ![image](https://github.com/user-attachments/assets/ce288c71-b2ba-4a90-b161-1c99a4c84188)
 
