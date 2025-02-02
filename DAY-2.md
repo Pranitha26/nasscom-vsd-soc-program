@@ -107,7 +107,12 @@ Die\ height\ in\ microns = \frac{671405}{1000} = 671.405\ Microns
 Area\ of\ die\ in\ microns = 660.685 * 671.405 = 443587.212425\ Square\ Microns
 ```
 
+
+Floordef in magic
+
 ![image](https://github.com/user-attachments/assets/49bfc34e-b5d8-40d1-9d2b-3427ec9023ac)
+
+Cells are equidistant as value is set to 1
 
 ![image](https://github.com/user-attachments/assets/96ce60e5-9e1b-414c-ad73-c0acc44de8aa)
 
@@ -117,9 +122,21 @@ Area\ of\ die\ in\ microns = 660.685 * 671.405 = 443587.212425\ Square\ Microns
 
 ![image](https://github.com/user-attachments/assets/29f630f8-7cb8-4a15-b255-c18e919809e8)
 
+%run_placement
+
 ![image](https://github.com/user-attachments/assets/4d03de07-e4db-4320-9814-8b8cd7419048)
 
 ![image](https://github.com/user-attachments/assets/d39b7800-6b7f-4be9-9024-25bbf8031b0e)
+
+Floordef in magic
+
+![image](https://github.com/user-attachments/assets/bb65b0d4-94f0-44a8-97a4-0854c9a88515)
+
+Legal Cell Placement
+
+![image](https://github.com/user-attachments/assets/d9bd706f-2ec5-4747-905a-426a43c02e40)
+
+
 
 
 
@@ -131,4 +148,6 @@ Taking an example of a simple netlist, with FFs and standard cells. Here, we can
 ![image](https://github.com/user-attachments/assets/bf8fd07c-b027-435e-ab38-e8cc3b5416dc)
 
 This is a shelf arrangement that includes FFs, standard cells, and blocks. This can be called a library, the components of the netlist & blocks act as the books. The library consists of the information of the cells and their shape and size. Size of the cell is inversely proportionate to resistance path.
+
+
 
