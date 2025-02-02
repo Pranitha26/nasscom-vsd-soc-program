@@ -172,6 +172,19 @@ Routing
 
 ![image](https://github.com/user-attachments/assets/7501b271-f18f-4548-831f-b23c7b985f1b)
 
+![image](https://github.com/user-attachments/assets/2739ec37-8446-46b9-8a1c-880a710cc229)
+
+The connection of the metal layers is determined via routing. The thickness of the metal layers is determined by the PDK.
+
+Sign off
+
+![image](https://github.com/user-attachments/assets/9cfb8921-93d0-47d8-89cc-619c4b899508)
+
+3 kinds of verifications in the sign-off stage
+* DRC: Checks whether the design fabrication rules are honoured by the final layout
+* LVS: Checks the correspondence of the final layout functionality and gate-level netlist that we start with
+* STA: Checks that the design runs under given clock frequencies
+
 
 ## DAY 1 Tasks
 Calculate the flop ratio
