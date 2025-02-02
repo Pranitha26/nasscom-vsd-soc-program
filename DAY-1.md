@@ -1,5 +1,5 @@
-# FUNDAMENTALS OF CHIP DESIGN
-
+# DAY-1: FUNDAMENTALS OF CHIP DESIGN
+## How to talk to computers
 <img width="445" alt="image" src="https://github.com/user-attachments/assets/deea4487-1d92-4470-8f14-519e1189681c" />
 
 This is an Arduino board and the encircled part is the chip or processor
@@ -45,12 +45,12 @@ The components of the core are called ***FOUNDRY IPs***. They are factories with
 <img width="798" alt="image" src="https://github.com/user-attachments/assets/c06e80d0-f36a-4cfe-98b3-3d9f95c19752" />
 
 
-***RISC-V ISA(INSTRUCTION SET ARCHIETECTURE)***
+### RISC-V ISA(INSTRUCTION SET ARCHIETECTURE)
 
 
 They are methods through which we can communicate with computers, i.e, it is the language of computers
 If a C Program has to run on a chip's interior, a certain flow must be followed.
-First, the C Program is compiled into its Assembly-Level Program; this is then converted into the Machine-Language Program, i.e, Binary Language which is understood by the hardware of the computer(0 and 1).
+First, the C Program is compiled into its Assembly-Level Program; this is then converted into the Machine-Language Program, i.e., Binary Language which is understood by the hardware of the computer(0 and 1).
 Finally, these bits get executed in this layout and the desired output is generated.
 
 <img width="960" alt="image" src="https://github.com/user-attachments/assets/c871d018-f0de-4303-abd0-635b6ba2e53f" />
@@ -61,19 +61,19 @@ Finally, these bits get executed in this layout and the desired output is genera
 
 <img width="275" alt="image" src="https://github.com/user-attachments/assets/3b7a69b2-534b-4382-bdea-87b1e777b62c" />
 
-Some common apps used by use on an everyday basis.
+Some common apps are used by use on an everyday basis.
 
 <img width="352" alt="image" src="https://github.com/user-attachments/assets/68b444eb-e0ae-4179-9c77-1576f4c4c116" />
 
-On our systems, this is how the hardware of these apps look like, i.e, this is the representation of the chip
+On our systems, this is how the hardware of these apps looks like, i.e, this is the representation of the chip
 
 But, how do the chips become these apps??
 
-To answer that, there is a step by step process
+To answer that, there is a step-by-step process
 
 <img width="993" alt="image" src="https://github.com/user-attachments/assets/dd1fc0fc-85c3-43b4-9d0f-b869141c82c3" />
 
-First, these apps enter into blocks to system softwares, which converts the apps into binary language. 
+First, these apps enter into blocks to system software, which converts the apps into binary language. 
 
 <img width="360" alt="image" src="https://github.com/user-attachments/assets/ce188fe3-3600-4752-816f-24281f88779d" />
 
@@ -102,10 +102,75 @@ We start by acquiring the specifications from the instructions set. Then, we use
 There are parts of this course:
 <img width="975" alt="image" src="https://github.com/user-attachments/assets/a5a7904f-2bbb-4642-a1aa-af00a8cd9102" />
 
-***DIGITAL ASIC DESIGN***
+### DIGITAL ASIC DESIGN
 <img width="978" alt="image" src="https://github.com/user-attachments/assets/f10d957c-ca7d-4e9a-b148-0dce296e5fb7" />
 
-RTL IPs: Hardware 
+***RTL IPs***: Hardware description language, registers transfer level models of the functions to be implemented including the RTL of whole use IPs.
+***EDA***: Electronic Design Automation, is the CAD tools required to design the circuit, etc 
+***PDK Data***: Process design kit
+
+Until 1979, design & fabrication of the grid circuits were tightly coupled & by only a few companies like TI, Intel, etc.
+In 1979, John Conway and Carver Mead proposed separating design from fabrication by releasing Lambda-based design rules. They then published the first VLSI(very large-scale integration) book, Introduction to VLSI Systems. This book gave rise to VLSI education and Structure Design Methodology, which laid the basics of modern ISE design practices. 
+After that, many fabric-only companies like ***Pure Play*** and design-only companies like Fabless started to emerge 
+***PDK is the interface between the user and Fab, a set of files.***
+PDK include Process Design Tools, Design Structured cell libraries, IO libraries, etc. Hence, the PDK has a lot of information that was distributed under Non-Disclosure Agreements(NDA) making it inaccessible to the public.
+In 2020, Google collaborated with Skywater to open-source the PDK for the 130nm Skywater processor, leading to the release of the first ever open-source PDK
+
+![image](https://github.com/user-attachments/assets/34cab4b3-db2a-411e-a0d6-7fc7aeac0255)
+
+#### ASIC Flow Objective
+ASIC is a complex process involving numerous steps and technology
+To convert RTL to GDSII(Automated PnR and/or Physical Implementation)
+GDSII is a binary file format used to exchange information about integrated circuits (ICs). It's the industry standard for Electronic Design Automation (EDA) data exchange.
+Steps of RTL to GDSII flow
+
+![image](https://github.com/user-attachments/assets/72967d4f-2e29-4f16-b07c-ce60b6fe1a5c)
+
+Synthesis
+This converts RTL(Register Transfer Level) to its circuits using Standard Cell Library components. Standard cells are the logic gates. The resultant circuit is described in HDL and is called Gate Level Netlist. 
+The functions of the Gate Level are equivalent to the RTL
+
+![image](https://github.com/user-attachments/assets/3e73bc1a-c232-4e6c-a781-134f110f024a)
+
+Standard cells
+They are the fundamental blocks
+Detailed view-GDSII & Abstract view- LEF
+
+![image](https://github.com/user-attachments/assets/8ab2c19b-8b3e-4f23-9416-01e34a2b9a24)
+
+
+Chip Floor Planning
+
+![image](https://github.com/user-attachments/assets/4652412a-c479-4b69-a41c-919e94163113)
+
+Macro Floor Planning
+
+![image](https://github.com/user-attachments/assets/0c2bae11-9cbf-4111-bb1d-a00374501a42)
+
+Power Planning
+Power Planning has many layers. The upper metal layers are thick with low resistance and are used for power distribution. This is doen to avoid IR drops and electron migration
+
+![image](https://github.com/user-attachments/assets/5d38c66d-ef01-4be8-a58e-cc4c30fafe4a)
+
+Placement
+
+![image](https://github.com/user-attachments/assets/42bd45bc-6a5e-4630-a777-30adc2afe364)
+
+Global vs Detailed Placement
+Global: Tries to find the best position for the cells, which are not necessarily legal
+Detailed: The Global Placements are made legal, and the cells don't overlap
+
+![image](https://github.com/user-attachments/assets/ce288c71-b2ba-4a90-b161-1c99a4c84188)
+
+Clock-Tree Synthesis
+
+![image](https://github.com/user-attachments/assets/bb289a87-0bc1-43bc-b1e3-10f80fb12c4b)
+
+Clock skew is the arrival of the clock at different components at different times
+
+Routing
+
+![image](https://github.com/user-attachments/assets/7501b271-f18f-4548-831f-b23c7b985f1b)
 
 
 ## DAY 1 Tasks
